@@ -5021,7 +5021,7 @@ MonoBehaviour:
   _sceneActiveTime: 4
   _scene: {fileID: 998414415}
   _scene2CameraX: 200
-  _scene2ActiveTime: 4
+  _scene2ActiveTime: 6
   _scene2: {fileID: 1163633165}
   _nextButton: {fileID: 705344008}
   _well: {fileID: 37023407}
