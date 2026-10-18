@@ -14,7 +14,7 @@ public class StorageUpgradeButton : MonoBehaviour
             return;
 
         Vector2 screenPos = Mouse.current.position.ReadValue();
-        Vector2 worldPos = Camera.current.ScreenToWorldPoint(screenPos);
+        Vector2 worldPos = Camera.main.ScreenToWorldPoint(screenPos);
 
         RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector2.zero);
 

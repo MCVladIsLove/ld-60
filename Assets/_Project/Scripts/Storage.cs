@@ -11,6 +11,8 @@ public class Storage : MonoBehaviour
     [SerializeField] private Storage _nextStorageLevel;
     [SerializeField] private StorageUpgradeButton _upgradeButton;
 
+    public int MaxOil => _maxOil;
+
     public void SetOil(int oilAmount)
     {
         _fillAmount.text = $"{oilAmount}/{_maxOil}";
