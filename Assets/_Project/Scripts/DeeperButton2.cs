@@ -5,12 +5,11 @@ using UnityEngine.InputSystem;
 public class DeeperButton2 : MonoBehaviour
 {
     [SerializeField] private int _cost;
-    [SerializeField] private float _sceneDelay = 1;
-    [SerializeField] private float _sceneCameraX = 100;
-    [SerializeField] private float _sceneActiveTime = 4f;
+    [SerializeField] private float _sceneCameraX = 300;
+    [SerializeField] private float _sceneActiveTime = 8f;
     [SerializeField] private GameObject _scene;
-    [SerializeField] private float _scene2CameraX = 100;
-    [SerializeField] private float _scene2ActiveTime = 4f;
+    [SerializeField] private float _scene2CameraX = 400;
+    [SerializeField] private float _scene2ActiveTime = 3f;
     [SerializeField] private GameObject _scene2;
     [SerializeField] private GameObject _nextButton;
 
@@ -35,8 +34,8 @@ public class DeeperButton2 : MonoBehaviour
 
     private void DoSmth()
     {
-        DOVirtual.DelayedCall(_sceneDelay, Scene1);
-
+        gameObject.SetActive(false);
+        Scene1();
     }
 
     private void Scene1()
@@ -45,7 +44,6 @@ public class DeeperButton2 : MonoBehaviour
         Camera camera = Camera.main;
         camera.transform.SetXPosition(_sceneCameraX);
         DOVirtual.DelayedCall(_sceneActiveTime, Scene2);
-
     }
 
     private void Scene2()
@@ -56,7 +54,6 @@ public class DeeperButton2 : MonoBehaviour
         Camera camera = Camera.main;
         camera.transform.SetXPosition(_scene2CameraX);
         DOVirtual.DelayedCall(_scene2ActiveTime, End);
-
     }
 
     private void End()
