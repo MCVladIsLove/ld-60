@@ -45,7 +45,7 @@ public class OilCollectAnimationSpawner : MonoBehaviour
         Vector2 shift = Random.insideUnitCircle * _spawnRange;
         animation.transform.position = new Vector2(position.x + shift.x, position.y + shift.y);
 
-        animation.transform.DOMoveY(transform.position.y + _flyHeight, _flyTime).SetEase(_flyEase)
+        animation.transform.DOMoveY(animation.transform.position.y + _flyHeight, _flyTime).SetEase(_flyEase)
             .OnComplete(() => ReleaseAnimation(animation));
     }
 
