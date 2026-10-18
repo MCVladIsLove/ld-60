@@ -9,6 +9,11 @@ public class GameStart : MonoBehaviour
     [SerializeField] private float _cameraMoveDuration = 2;
     [SerializeField] private Ease _cameraMoveEase = Ease.InCirc;
     [SerializeField] private float _oilStartDelay = 3;
+    [SerializeField] private float _smileDelay = 6;
+    [SerializeField] private float _smileCameraX = 35;
+    [SerializeField] private float _smileActiveTime = 3.5f;
+    [SerializeField] private GameObject _smilePanel;
+    [SerializeField] private GameObject _storage;
 
     private void Awake()
     {
@@ -22,8 +27,27 @@ public class GameStart : MonoBehaviour
         camera.transform.DOMoveY(_cameraEndYPosition, _cameraMoveDuration).SetEase(_cameraMoveEase);
 
         DOVirtual.DelayedCall(_oilStartDelay, StartGeyser);
+        DOVirtual.DelayedCall(_smileDelay, ShowSmile);
     }
 
     private void StartGeyser() =>
         _startGeyser.gameObject.SetActive(true);
+
+    private void ShowSmile()
+    {
+        _smilePanel.SetActive(true);
+
+        Camera camera = Camera.main;
+        camera.transform.SetXPosition(_smileCameraX);
+        DOVirtual.DelayedCall(_smileActiveTime, BringCameraBack);
+    }
+
+    private void BringCameraBack()
+    {
+        _storage.SetActive(true);
+        _smilePanel.SetActive(false);
+
+        Camera camera = Camera.main;
+        camera.transform.SetXPosition(0);
+    }
 }
