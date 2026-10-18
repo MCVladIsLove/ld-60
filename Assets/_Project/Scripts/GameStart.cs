@@ -14,6 +14,8 @@ public class GameStart : MonoBehaviour
     [SerializeField] private float _smileActiveTime = 3.5f;
     [SerializeField] private GameObject _smilePanel;
     [SerializeField] private GameObject _storage;
+    [SerializeField] private GameObject _collectText;
+    [SerializeField] private GameObject _updateButton;
 
     private void Awake()
     {
@@ -46,6 +48,8 @@ public class GameStart : MonoBehaviour
     {
         _storage.SetActive(true);
         _smilePanel.SetActive(false);
+        _collectText.SetActive(true);
+        _updateButton.SetActive(true);
 
         Camera camera = Camera.main;
         camera.transform.SetXPosition(0);
