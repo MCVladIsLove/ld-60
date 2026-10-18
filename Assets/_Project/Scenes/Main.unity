@@ -898,7 +898,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &558099480
 Transform:
   m_ObjectHideFlags: 0
@@ -992,7 +992,7 @@ MonoBehaviour:
   _spriteMask: {fileID: 540671498}
   _maskMinPos: -1.631
   _maskMaxPos: -0.95
-  _maxOil: 100
+  _maxOil: 75
   _fillAmount: {fileID: 2074467061}
   _nextStorageLevel: {fileID: 2137949357}
   _upgradeButton: {fileID: 985189307}
@@ -1808,7 +1808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &912997005
 Animator:
   serializedVersion: 7
@@ -2025,7 +2025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StorageUpgradeButton
   _upgradeText: {fileID: 1548843365}
-  _upgradeCost: 15
+  _upgradeCost: 40
   _storage: {fileID: 558099482}
 --- !u!61 &985189308
 BoxCollider2D:
@@ -2527,7 +2527,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: -150 UP
+  m_text: -40 UP
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
@@ -3226,7 +3226,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2137949356
 Transform:
   m_ObjectHideFlags: 0
