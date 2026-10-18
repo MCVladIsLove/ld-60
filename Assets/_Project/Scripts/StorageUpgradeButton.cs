@@ -21,7 +21,10 @@ public class StorageUpgradeButton : MonoBehaviour
         if (hit.collider != null && hit.collider.gameObject == gameObject)
         {
             if (OilManager.Instance.OilCurrent >= _upgradeCost)
+            {
+                OilManager.Instance.DecreaseOil(_upgradeCost);
                 _storage.Upgrade();
+            }
         }
     }
 }

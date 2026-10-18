@@ -33,4 +33,20 @@ public class OilManager : MonoBehaviour
             return;
         }
     }
+
+    public void DecreaseOil(int oil)
+    {
+        if (_oilCurrent - oil < 0)
+            return;
+
+        _oilCurrent -= oil;
+        foreach (Storage storage in _storages)
+        {
+            if (!storage.gameObject.activeInHierarchy)
+                continue;
+
+            storage.SetOil(_oilCurrent);
+            return;
+        }
+    }
 }
