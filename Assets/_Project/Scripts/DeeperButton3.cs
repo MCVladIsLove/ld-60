@@ -5,14 +5,11 @@ using UnityEngine.InputSystem;
 public class DeeperButton3 : MonoBehaviour
 {
     [SerializeField] private int _cost;
-    [SerializeField] private float _sceneDelay = 1;
-    [SerializeField] private float _sceneCameraX = 100;
-    [SerializeField] private float _sceneActiveTime = 4f;
-    [SerializeField] private GameObject _scene;
-    [SerializeField] private float _scene2CameraX = 100;
-    [SerializeField] private float _scene2ActiveTime = 4f;
-    [SerializeField] private GameObject _scene2;
-    [SerializeField] private GameObject _nextButton;
+    [SerializeField] private Moon _moon;
+    [SerializeField] private float _moonX = 0.29f;
+    [SerializeField] private float _moonY = 1.5f;
+    [SerializeField] private float _moonMoveTime = 1.5f;
+    [SerializeField] private Ease _moonMoveEase;
 
     private void Update()
     {
@@ -35,35 +32,10 @@ public class DeeperButton3 : MonoBehaviour
 
     private void DoSmth()
     {
-        DOVirtual.DelayedCall(_sceneDelay, Scene1);
+        OilManager.Instance.DisableOil();
+        gameObject.SetActive(false);
 
-    }
-
-    private void Scene1()
-    {
-        _scene.SetActive(true);
-        Camera camera = Camera.main;
-        camera.transform.SetXPosition(_sceneCameraX);
-        DOVirtual.DelayedCall(_sceneActiveTime, Scene2);
-
-    }
-
-    private void Scene2()
-    {
-        _scene.SetActive(false);
-        _scene2.SetActive(true);
-
-        Camera camera = Camera.main;
-        camera.transform.SetXPosition(_scene2CameraX);
-        DOVirtual.DelayedCall(_scene2ActiveTime, End);
-
-    }
-
-    private void End()
-    {
-        _scene2.SetActive(false);
-        _nextButton.SetActive(true);
-        Camera camera = Camera.main;
-        camera.transform.SetXPosition(0);
+        _moon.transform.DOMove(new Vector3(_moonX, _moonY, _moon.transform.position.z), _moonMoveTime).SetEase(_moonMoveEase);
+        _moon.ActivateConsumption();
     }
 }

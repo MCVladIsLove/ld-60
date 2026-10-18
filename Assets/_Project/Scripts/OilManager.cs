@@ -6,6 +6,7 @@ public class OilManager : MonoBehaviour
     [SerializeField] private OilCollectAnimationSpawner _oilAnimationSpawner;
 
     private int _oilCurrent;
+    private bool _disabled;
 
     public int OilCurrent => _oilCurrent;
     public static OilManager Instance;
@@ -16,6 +17,9 @@ public class OilManager : MonoBehaviour
 
     public void AddOil(int oil, Vector3 position)
     {
+        if (_disabled)
+            return;
+
         foreach (Storage storage in _storages)
         {
             if (!storage.gameObject.activeInHierarchy) 
@@ -34,8 +38,11 @@ public class OilManager : MonoBehaviour
         }
     }
 
-    public void DecreaseOil(int oil)
+    public void DecreaseOil(int oil, bool force = false)
     {
+        if (_disabled && !force)
+            return;
+
         if (_oilCurrent - oil < 0)
             return;
 
@@ -49,4 +56,7 @@ public class OilManager : MonoBehaviour
             return;
         }
     }
+
+    public void DisableOil() =>
+        _disabled = true;
 }
