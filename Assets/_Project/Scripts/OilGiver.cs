@@ -11,6 +11,14 @@ public class OilGiver : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        Collect();
+    }
+
+    public void Collect()
+    {
+        if (!gameObject.activeInHierarchy)
+            return;
+
         OilManager.Instance.AddOil(_amount, _rewardAnimationSpawnPoint.transform.position);
         OnOilCollected?.Invoke();
     }

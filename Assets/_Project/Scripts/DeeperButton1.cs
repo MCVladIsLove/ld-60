@@ -17,6 +17,7 @@ public class DeeperButton1 : MonoBehaviour
     [SerializeField] private GameObject _nextButton;
     [SerializeField] private GameObject _well;
     [SerializeField] private GameObject _oil;
+    [SerializeField] private GameObject _spawnerBtn;
 
     private void Update()
     {
@@ -50,6 +51,7 @@ public class DeeperButton1 : MonoBehaviour
 
     private void Scene1()
     {
+        _spawnerBtn.SetActive(true);
         _scene.SetActive(true);
         Camera camera = Camera.main;
         camera.transform.SetXPosition(_sceneCameraX);
