@@ -22,7 +22,7 @@ public class StorageUpgradeButton : MonoBehaviour
         {
             if (OilManager.Instance.OilCurrent >= _upgradeCost)
             {
-                OilManager.Instance.DecreaseOil(_upgradeCost);
+                OilManager.Instance.TryDecreaseOil(_upgradeCost);
                 _storage.Upgrade();
             }
         }

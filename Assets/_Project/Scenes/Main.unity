@@ -1731,7 +1731,7 @@ Transform:
   m_GameObject: {fileID: 496779334}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.29, y: 1.5, z: 0}
+  m_LocalPosition: {x: -0.08, y: -0.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3478,7 +3478,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &845805811
 Transform:
   m_ObjectHideFlags: 0
@@ -3507,11 +3507,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5eed9f159865154696749c5d86b8cdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeeperButton3
-  _cost: 1000
+  _cost: 1
   _moon: {fileID: 2068408152}
-  _moonX: 0.29
-  _moonY: 1.5
-  _moonMoveTime: 1.5
+  _moonX: -0.08
+  _moonY: -0.56
+  _moonMoveTime: 0.9
   _moonMoveEase: 4
 --- !u!61 &845805813
 BoxCollider2D:
@@ -4263,7 +4263,7 @@ Transform:
   m_GameObject: {fileID: 937780712}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.46, y: -2.45, z: -0}
+  m_LocalPosition: {x: -0.01, y: -2.56, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5056,7 +5056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::OilProjectileAnimationSpawner
   _animationPrefab: {fileID: -7081782299902148615, guid: 2adef06762b539447b8401069f593426, type: 3}
   _container: {fileID: 1245836108}
-  _flyTime: 0.86
+  _flyTime: 0.6
   _flyEase: 3
   _spawnRange: 2
   _spawnPoint: {fileID: 1245836108}
@@ -8080,7 +8080,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 5661f81679e50a648a37b4b3e97b5b1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -8104,9 +8104,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54fcbd8ee7fac2943a23d5765379d9b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Moon
-  _oilConsumtion: 100
+  _oilConsumtion: 1
   _oilNeeded: 5000
   _oilProjectileAnimationSpawner: {fileID: 1245836109}
+  _maxIdleScale: 1.05
+  _idleDuration: 0.85
+  _idleEase: 4
+  _pulseScale: 0.1
+  _pulseDuration: 0.1
+  _pulseEase: 20
+  _camera: {fileID: 330585545}
+  _minRotation: -14
+  _maxRotation: 14
+  _minRotationStep: 5
+  _maxRotationStep: 10
+  _rotationDuration: 0.07
+  _rotationEase: 20
+  _focusStep: 0.03
+  _focusDuration: 0.07
+  _focusEase: 20
+  _lastCameraFocus: 1.65
+  _lastCameraRotation: 37.74
+  _lastCameraRotationDuration: 0.2
+  _lastCameraFocusEase: 20
+  _lastCameraFocusDuration: 0.2
 --- !u!61 &2068408153
 BoxCollider2D:
   m_ObjectHideFlags: 0

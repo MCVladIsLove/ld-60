@@ -25,7 +25,7 @@ public class WellUpgradeButton : MonoBehaviour
             {
                 _thisWell.SetActive(false);
                 _nextWell.SetActive(true);
-                OilManager.Instance.DecreaseOil(_upgradeCost);
+                OilManager.Instance.TryDecreaseOil(_upgradeCost);
             }
         }
     }

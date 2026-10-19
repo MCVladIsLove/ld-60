@@ -35,7 +35,8 @@ public class DeeperButton3 : MonoBehaviour
         OilManager.Instance.DisableOil();
         gameObject.SetActive(false);
 
-        _moon.transform.DOMove(new Vector3(_moonX, _moonY, _moon.transform.position.z), _moonMoveTime).SetEase(_moonMoveEase);
-        _moon.ActivateConsumption();
+        _moon.transform.DOMove(new Vector3(_moonX, _moonY, _moon.transform.position.z), _moonMoveTime)
+            .SetEase(_moonMoveEase)
+            .OnComplete(_moon.ActivateConsumption);
     }
 }

@@ -38,13 +38,13 @@ public class OilManager : MonoBehaviour
         }
     }
 
-    public void DecreaseOil(int oil, bool force = false)
+    public bool TryDecreaseOil(int oil, bool force = false)
     {
         if (_disabled && !force)
-            return;
+            return false;
 
         if (_oilCurrent - oil < 0)
-            return;
+            return false;
 
         _oilCurrent -= oil;
         foreach (Storage storage in _storages)
@@ -53,8 +53,10 @@ public class OilManager : MonoBehaviour
                 continue;
 
             storage.SetOil(_oilCurrent);
-            return;
+            return true;
         }
+
+        return false;
     }
 
     public void DisableOil() =>

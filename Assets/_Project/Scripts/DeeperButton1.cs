@@ -39,7 +39,7 @@ public class DeeperButton1 : MonoBehaviour
 
     private void DoSmth()
     {
-        OilManager.Instance.DecreaseOil(_cost);
+        OilManager.Instance.TryDecreaseOil(_cost);
 
         gameObject.SetActive(false);
         _oil.SetActive(false);
