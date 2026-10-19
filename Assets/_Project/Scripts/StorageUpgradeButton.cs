@@ -8,6 +8,11 @@ public class StorageUpgradeButton : MonoBehaviour
     [SerializeField] private int _upgradeCost;
     [SerializeField] private Storage _storage;
 
+    private void Awake()
+    {
+        _upgradeText.text = $"-{_upgradeCost} UP";
+    }
+
     private void Update()
     {
         if (Mouse.current == null || !Mouse.current.leftButton.wasPressedThisFrame)

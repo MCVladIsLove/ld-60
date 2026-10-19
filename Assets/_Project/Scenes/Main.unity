@@ -862,7 +862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WellUpgradeButton
   _upgradeText: {fileID: 570783924}
-  _upgradeCost: 1
+  _upgradeCost: 750
   _nextWell: {fileID: 1574968308}
   _thisWell: {fileID: 37023407}
 --- !u!1 &127187154
@@ -976,7 +976,7 @@ MonoBehaviour:
   _spriteMask: {fileID: 631559151}
   _maskMinPos: -3.94
   _maskMaxPos: -1.7
-  _maxOil: 500
+  _maxOil: 5000
   _fillAmount: {fileID: 848910742}
   _nextStorageLevel: {fileID: 937780714}
   _upgradeButton: {fileID: 1216171495}
@@ -3095,7 +3095,7 @@ MonoBehaviour:
   _spriteMask: {fileID: 540671498}
   _maskMinPos: -1.631
   _maskMaxPos: -0.95
-  _maxOil: 75
+  _maxOil: 50
   _fillAmount: {fileID: 2074467061}
   _nextStorageLevel: {fileID: 2137949357}
   _upgradeButton: {fileID: 985189307}
@@ -3337,7 +3337,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: -40 UP
+  m_text: -750 UP
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
@@ -4439,7 +4439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6aa41831b3858b47896a44e350cbfa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeeperButton2
-  _cost: 1
+  _cost: 2000
   _sceneCameraX: 300
   _sceneActiveTime: 7.1
   _scene: {fileID: 449668886}
@@ -4770,7 +4770,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.39, y: 2.0804, z: 0}
-  m_LocalScale: {x: 1.3848256, y: 1.3848256, z: 1.3848256}
+  m_LocalScale: {x: 1.5072442, y: 1.5072442, z: 1.5072442}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1849234291}
@@ -4788,7 +4788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5eed9f159865154696749c5d86b8cdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeeperButton3
-  _cost: 1
+  _cost: 10000
   _moon: {fileID: 2068408152}
   _moonX: -0.08
   _moonY: -0.56
@@ -5797,7 +5797,7 @@ MonoBehaviour:
   _spriteMask: {fileID: 1217706542}
   _maskMinPos: -5.9
   _maskMaxPos: -2.71
-  _maxOil: 1000
+  _maxOil: 10000
   _fillAmount: {fileID: 1289477930}
   _nextStorageLevel: {fileID: 0}
   _upgradeButton: {fileID: 1439887005}
@@ -5967,7 +5967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StorageUpgradeButton
   _upgradeText: {fileID: 1548843365}
-  _upgradeCost: 1
+  _upgradeCost: 30
   _storage: {fileID: 558099482}
 --- !u!61 &985189308
 BoxCollider2D:
@@ -6648,7 +6648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StorageUpgradeButton
   _upgradeText: {fileID: 626382508}
-  _upgradeCost: 1
+  _upgradeCost: 2500
   _storage: {fileID: 127187157}
 --- !u!212 &1216171496
 SpriteRenderer:
@@ -7871,7 +7871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StorageUpgradeButton
   _upgradeText: {fileID: 909708850}
-  _upgradeCost: 1
+  _upgradeCost: 350
   _storage: {fileID: 2137949357}
 --- !u!212 &1318103764
 SpriteRenderer:
@@ -8084,7 +8084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d51d8b678e3e6d941b1067df3fe4ae23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeeperButton1
-  _cost: 1
+  _cost: 65
   _sceneDelay: 1
   _animDelay: 0
   _animation: {fileID: 128743905}
@@ -8264,16 +8264,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaee0952e8f7fb14d91c7ff6e01fa0ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
-  _cost1: 1
-  _cost2: 2
+  _cost1: 25
+  _cost2: 3500
   _costText: {fileID: 2119180754}
   _level1Worker: {fileID: 1273972251}
   _level2Worker: {fileID: 4526148}
   _well1: {fileID: 1829663954}
   _well2: {fileID: 1293787126}
   _shine: {fileID: 1341724155}
-  _timeToCollect1: 0.8
-  _timeToCollect2: 0.25
+  _timeToCollect1: 0.3
+  _timeToCollect2: 0.1
 --- !u!1 &1362810061
 GameObject:
   m_ObjectHideFlags: 0
@@ -9058,7 +9058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f7deccb5f316f459471863c3f268c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnerCreateButton
-  _cost: 10
+  _cost: 175
   _spawner: {fileID: 1652270184}
 --- !u!1 &1548843363
 GameObject:
@@ -9117,7 +9117,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: -40 UP
+  m_text: -30 UP
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
@@ -9961,7 +9961,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: -500 CREATE
+  m_text: -175 CREATE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
@@ -10175,7 +10175,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: -100 DEEPER
+  m_text: -2000 DEEPER
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
@@ -10648,7 +10648,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: -100 UP
+  m_text: -65 UP
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
@@ -10799,7 +10799,7 @@ RectTransform:
   m_GameObject: {fileID: 1849234290}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7221126, y: 0.7221126, z: 0.7221126}
+  m_LocalScale: {x: 0.6634625, y: 0.6634625, z: 0.6634625}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 845805811}
@@ -10829,7 +10829,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: -5000 FINISH IT
+  m_text: -10000 FINISH IT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
@@ -11281,7 +11281,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1963062253
 Transform:
   m_ObjectHideFlags: 0
@@ -11699,8 +11699,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54fcbd8ee7fac2943a23d5765379d9b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Moon
-  _oilConsumtion: 1
-  _oilNeeded: 5000
+  _oilConsumtion: 100
+  _oilNeeded: 10000
   _oilProjectileAnimationSpawner: {fileID: 1245836109}
   _maxIdleScale: 1.05
   _idleDuration: 0.85
@@ -11833,7 +11833,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0/75
+  m_text: 0/50
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
@@ -12636,7 +12636,7 @@ MonoBehaviour:
   _spriteMask: {fileID: 1255514409}
   _maskMinPos: -2.59
   _maskMaxPos: -0.95
-  _maxOil: 200
+  _maxOil: 500
   _fillAmount: {fileID: 563975315}
   _nextStorageLevel: {fileID: 127187157}
   _upgradeButton: {fileID: 1318103763}
