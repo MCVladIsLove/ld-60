@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System.Collections;
 using UnityEngine;
 
 public class GameStart : MonoBehaviour
@@ -23,8 +24,9 @@ public class GameStart : MonoBehaviour
         camera.transform.SetYPosition(_cameraStartYPosition);
     }
 
-    private void Start()
+    private IEnumerator Start()
     {
+        yield return new WaitForEndOfFrame();
         Camera camera = Camera.main;
         camera.transform.DOMoveY(_cameraEndYPosition, _cameraMoveDuration).SetEase(_cameraMoveEase);
 

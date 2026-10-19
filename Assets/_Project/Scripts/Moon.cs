@@ -34,6 +34,7 @@ public class Moon : MonoBehaviour, IPointerClickHandler
     [SerializeField] private float _cameraMoveOutDuration;
     [SerializeField] private float _moonGrowScaleStep;
     [SerializeField] private Animator _animator;
+    [SerializeField] private GameObject _pickaxe;
 
     private bool _activated;
     private Tween _idleTween;
@@ -91,6 +92,8 @@ public class Moon : MonoBehaviour, IPointerClickHandler
 
     private void Vomit()
     {
+        _pickaxe.SetActive(true);
+
         _camera.transform.DOShakePosition(
             duration: _vomitDuration,
             strength: new Vector3(0.08f, 0.14f, 0f),
