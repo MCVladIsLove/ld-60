@@ -40,6 +40,7 @@ public class OilProjectileAnimationSpawner : MonoBehaviour
         else
             _pool.RemoveAt(0);
 
+        animation.Init();
         animation.gameObject.SetActive(true);
 
         Vector2 shift = Random.insideUnitCircle * _spawnRange;
