@@ -8132,6 +8132,7 @@ MonoBehaviour:
   _vomitDuration: 3
   _cameraMoveOutDelay: 3.5
   _cameraMoveOutDuration: 6
+  _moonGrowScaleStep: 0.003
 --- !u!61 &2068408153
 BoxCollider2D:
   m_ObjectHideFlags: 0

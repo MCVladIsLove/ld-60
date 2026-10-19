@@ -32,12 +32,14 @@ public class Moon : MonoBehaviour, IPointerClickHandler
     [SerializeField] private float _vomitDuration;
     [SerializeField] private float _cameraMoveOutDelay;
     [SerializeField] private float _cameraMoveOutDuration;
+    [SerializeField] private float _moonGrowScaleStep;
 
     private bool _activated;
     private Tween _idleTween;
     private Tween _pulseTween;
     private Tween _cameraRotationTween;
     private Tween _cameraFocusTween;
+    private float _moonGrowScale = 1;
 
     public void ActivateConsumption()
     {
@@ -60,8 +62,12 @@ public class Moon : MonoBehaviour, IPointerClickHandler
         _idleTween?.Kill(true);
         _idleTween = null;
 
-        if(_pulseTween == null || !_pulseTween.IsPlaying()) 
+        _moonGrowScale += _moonGrowScaleStep;
+        if (_pulseTween == null || !_pulseTween.IsPlaying())
+        {
+            transform.localScale = Vector3.one * _moonGrowScale;
             _pulseTween = transform.DOPunchScale(Vector3.one * _pulseScale, _pulseDuration).SetEase(_pulseEase);
+        }
 
         if (OilManager.Instance.OilCurrent == 0)
             EndMoonScene();
@@ -99,7 +105,7 @@ public class Moon : MonoBehaviour, IPointerClickHandler
             randomness: 25f,
             fadeOut: true
         );
-
+        transform.DOScale(1, _vomitDuration);
         DOVirtual.DelayedCall(_cameraMoveOutDelay, MoveOut);
     }
 
