@@ -8128,6 +8128,10 @@ MonoBehaviour:
   _lastCameraRotationDuration: 0.2
   _lastCameraFocusEase: 20
   _lastCameraFocusDuration: 0.2
+  _vomitDelay: 1
+  _vomitDuration: 3
+  _cameraMoveOutDelay: 3.5
+  _cameraMoveOutDuration: 6
 --- !u!61 &2068408153
 BoxCollider2D:
   m_ObjectHideFlags: 0

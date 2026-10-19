@@ -28,6 +28,10 @@ public class Moon : MonoBehaviour, IPointerClickHandler
     [SerializeField] private float _lastCameraRotationDuration;
     [SerializeField] private Ease _lastCameraFocusEase;
     [SerializeField] private float _lastCameraFocusDuration;
+    [SerializeField] private float _vomitDelay;
+    [SerializeField] private float _vomitDuration;
+    [SerializeField] private float _cameraMoveOutDelay;
+    [SerializeField] private float _cameraMoveOutDuration;
 
     private bool _activated;
     private Tween _idleTween;
@@ -73,6 +77,36 @@ public class Moon : MonoBehaviour, IPointerClickHandler
         _camera.transform.DORotate(new Vector3(0, 0, _lastCameraRotation), _lastCameraRotationDuration).SetEase(_lastCameraFocusEase);
         _cameraFocusTween = _camera.DOOrthoSize(_lastCameraFocus, _lastCameraFocusDuration).SetEase(_lastCameraFocusEase);
         _activated = false;
+
+        DOVirtual.DelayedCall(_vomitDelay, Vomit);
+    }
+
+    private void Vomit()
+    {
+        _camera.transform.DOShakePosition(
+            duration: _vomitDuration,
+            strength: new Vector3(0.08f, 0.14f, 0f),
+            vibrato: 18,
+            randomness: 35f,
+            snapping: false,
+            fadeOut: true
+        );
+
+        _camera.transform.DOShakeRotation(
+            duration: _vomitDuration,
+            strength: new Vector3(0f, 0f, 2.5f),
+            vibrato: 12,
+            randomness: 25f,
+            fadeOut: true
+        );
+
+        DOVirtual.DelayedCall(_cameraMoveOutDelay, MoveOut);
+    }
+
+    private void MoveOut()
+    {
+        _camera.transform.DORotate(new Vector3(0, 0, 0), _cameraMoveOutDuration);
+        _cameraFocusTween = _camera.DOOrthoSize(5.3f, _cameraMoveOutDuration);
     }
 
     private void CameraFocus()
