@@ -33,6 +33,7 @@ public class Moon : MonoBehaviour, IPointerClickHandler
     [SerializeField] private float _cameraMoveOutDelay;
     [SerializeField] private float _cameraMoveOutDuration;
     [SerializeField] private float _moonGrowScaleStep;
+    [SerializeField] private Animator _animator;
 
     private bool _activated;
     private Tween _idleTween;
@@ -84,6 +85,7 @@ public class Moon : MonoBehaviour, IPointerClickHandler
         _cameraFocusTween = _camera.DOOrthoSize(_lastCameraFocus, _lastCameraFocusDuration).SetEase(_lastCameraFocusEase);
         _activated = false;
 
+        _animator.Play("vomit");
         DOVirtual.DelayedCall(_vomitDelay, Vomit);
     }
 
